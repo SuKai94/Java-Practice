@@ -1,4 +1,4 @@
-package com.susu.designpatterns.celuemoshi;
+package com.susu.designpatterns.celue;
 
 public class AdvanceStrategy implements Strategy {
 

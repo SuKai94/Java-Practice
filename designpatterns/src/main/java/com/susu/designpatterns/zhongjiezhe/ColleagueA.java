@@ -1,4 +1,4 @@
-package com.susu.designpatterns.designpatterns;
+package com.susu.designpatterns.zhongjiezhe;
 
 public class ColleagueA extends AbstractColleague {
 
