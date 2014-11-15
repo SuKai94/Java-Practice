@@ -5,7 +5,7 @@
     android:background="#DC143C"
     android:orientation="vertical" >
 
-    <TextView
+<!--     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -13,6 +13,14 @@
         android:text="@string/list"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold" /> -->
+    
+    <ListView
+        android:id="@+id/tasklist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#f00"
+        android:dividerHeight="2px"
+        android:headerDividersEnabled="false" />
 
 </LinearLayout>

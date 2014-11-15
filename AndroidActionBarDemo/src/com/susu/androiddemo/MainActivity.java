@@ -44,7 +44,8 @@ public class MainActivity extends FragmentActivity implements TabListener {
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		mAdapter = new TabFragmentPagerAdapter(getSupportFragmentManager());
 		mViewPager.setAdapter(mAdapter);
-		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {  
+		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+			
             @Override  
             public void onPageSelected(int position) {
                 actionBar.setSelectedNavigationItem(position);
@@ -83,32 +84,32 @@ public class MainActivity extends FragmentActivity implements TabListener {
 		return true;
 	}
 
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.action_compose:
-			Toast.makeText(this, "Compose", Toast.LENGTH_SHORT).show();
-			return true;
-		case R.id.action_search:
-			Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
-			return true;
-		case R.id.action_settings:
-			Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
-			return true;
-		case android.R.id.home:
-			Intent upIntent = NavUtils.getParentActivityIntent(this);
-			if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
-				TaskStackBuilder.create(this)
-						.addNextIntentWithParentStack(upIntent)
-						.startActivities();
-			} else {
-				upIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				NavUtils.navigateUpTo(this, upIntent);
-			}
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+//	public boolean onOptionsItemSelected(MenuItem item) {
+//		switch (item.getItemId()) {
+//		case R.id.action_compose:
+//			Toast.makeText(this, "Compose", Toast.LENGTH_SHORT).show();
+//			return true;
+//		case R.id.action_search:
+//			Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
+//			return true;
+//		case R.id.action_settings:
+//			Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+//			return true;
+//		case android.R.id.home:
+//			Intent upIntent = NavUtils.getParentActivityIntent(this);
+//			if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
+//				TaskStackBuilder.create(this)
+//						.addNextIntentWithParentStack(upIntent)
+//						.startActivities();
+//			} else {
+//				upIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//				NavUtils.navigateUpTo(this, upIntent);
+//			}
+//			return true;
+//		default:
+//			return super.onOptionsItemSelected(item);
+//		}
+//	}
 
 	@Override
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {

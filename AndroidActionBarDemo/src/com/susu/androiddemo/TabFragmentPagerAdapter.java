@@ -17,7 +17,7 @@ public class TabFragmentPagerAdapter extends FragmentPagerAdapter {
 		Fragment ft = null;
 		switch (arg0) {
 		case 0:
-			ft = new ListFragment();
+			ft = new TaskFragment();
 			break;
 		case 1:
 			ft = new HistoryFragment();
