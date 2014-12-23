@@ -1,22 +1,11 @@
 package com.susu.designpatterns.guanchazhe;
 
-import java.util.ArrayList;
-import java.util.List;
+public interface Subject {
 
-public abstract class Subject {
-
-	private List<Observer> list = new ArrayList<Observer>();
-
-	public abstract void attach(Observer observer);
-
-	public void detach(Observer observer) {
-		list.remove(observer);
-	}
-
-	public void nodifyOBservers(String newState) {
-		for (Observer observer : list) {
-			observer.update(newState);
-		}
-	}
+	public void addObserver(Observer observer);
+	
+	public void removeObserver(Observer observer);
+	
+	public void notifyObserver(String str);
 
 }

@@ -1,22 +1,26 @@
 package com.susu.designpatterns.guanchazhe;
 
-public class ConcreteSubject extends Subject {
-	
-	private String state;
-	
-	public String getState() {
-		return state;
-	}
-	
-	public void change(String newState) {
-		state = newState;
-		System.out.println("主题状态为：" + state);
-		this.nodifyOBservers(state);
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConcreteSubject implements Subject {
+
+	private List<Observer> list = new ArrayList<>();
+
+	@Override
+	public void addObserver(Observer observer) {
+		list.add(observer);
 	}
 
 	@Override
-	public void attach(Observer observer) {
-		// TODO Auto-generated method stub
-		
+	public void removeObserver(Observer observer) {
+		list.remove(observer);
+	}
+
+	@Override
+	public void notifyObserver(String str) {
+		for (Observer observer : list) {
+			observer.update(str);
+		}
 	}
 }
