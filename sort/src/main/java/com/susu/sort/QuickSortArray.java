@@ -2,6 +2,7 @@ package com.susu.sort;
 
 /**
  * 快速排序
+ * 选择数组最右端数据项为枢纽
  * @author sukai
  *
  */
